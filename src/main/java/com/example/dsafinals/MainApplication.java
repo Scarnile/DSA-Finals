@@ -6,12 +6,13 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class MainApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 1220, 640);
+        Scene scene = new Scene(fxmlLoader.load());
 
         stage.setResizable(true);
         stage.setTitle("Hello!");
@@ -20,6 +21,10 @@ public class MainApplication extends Application {
         // Set the minimum bounds for the window
         stage.setMinWidth(500);
         stage.setMinHeight(300);
+
+        // CSS
+        String css = Objects.requireNonNull(getClass().getResource("stylesheets/application.css")).toExternalForm();
+        scene.getStylesheets().add(css);
 
         stage.show();
     }
