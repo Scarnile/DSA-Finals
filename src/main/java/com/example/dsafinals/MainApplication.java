@@ -15,12 +15,12 @@ public class MainApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load());
 
         stage.setResizable(true);
-        stage.setTitle("Hello!");
+        stage.setTitle("Journal");
         stage.setScene(scene);
 
         // Set the minimum bounds for the window
-        stage.setMinWidth(500);
-        stage.setMinHeight(300);
+        stage.setMinWidth(700);
+        stage.setMinHeight(400);
 
         // CSS
         String css = Objects.requireNonNull(getClass().getResource("stylesheets/application.css")).toExternalForm();
