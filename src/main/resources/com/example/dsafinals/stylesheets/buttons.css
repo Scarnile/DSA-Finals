@@ -6,9 +6,13 @@
 }
 
 .sidebar-button {
-    /*-fx-background-color: #e40000*/
     -fx-padding: 10;
     -fx-font-size: 17px;
     -fx-background-color: transparent;
     -fx-font-weight: 600;
+}
+
+.selected-button {
+    /*-fx-background-color: #3d3d3d;*/
+    -fx-background-color: #155dfc;
 }

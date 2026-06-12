@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
+<?import java.lang.String?>
 <BorderPane maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="200.0" minWidth="500.0"
-            prefHeight="500.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dsafinals.MainController">
+            prefHeight="500.0" prefWidth="1000.0" stylesheets="@stylesheets/application.css"
+            xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.dsafinals.MainController">
     <center>
         <BorderPane style="-fx-background-color: #0a0a0a;" BorderPane.alignment="CENTER">
             <top>
-                <BorderPane minHeight="-Infinity" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                <BorderPane minHeight="-Infinity" prefWidth="760.0" BorderPane.alignment="CENTER">
                     <top>
-                        <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                        <HBox maxWidth="1.7976931348623157E308" prefHeight="55.0" prefWidth="100.0"
+                              style="-fx-border-width: 0 0 1px 0;" styleClass="border" BorderPane.alignment="CENTER">
                             <children>
-                                <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS"/>
+                                <Region prefHeight="20.0" prefWidth="200.0" HBox.hgrow="ALWAYS"/>
                                 <Button minWidth="-Infinity" mnemonicParsing="false" styleClass="primary-button"
                                         stylesheets="@stylesheets/buttons.css" text="+  New Entry">
                                     <font>
@@ -23,10 +26,13 @@
                                     <padding>
                                         <Insets bottom="10.0" left="17.0" right="17.0" top="10.0"/>
                                     </padding>
+                                    <HBox.margin>
+                                        <Insets right="20.0"/>
+                                    </HBox.margin>
                                 </Button>
                             </children>
                             <BorderPane.margin>
-                                <Insets right="20.0" top="15.0"/>
+                                <Insets top="15.0"/>
                             </BorderPane.margin>
                         </HBox>
                     </top>
@@ -35,7 +41,8 @@
         </BorderPane>
     </center>
     <left>
-        <VBox prefHeight="620.0" prefWidth="230.0" spacing="8.0" style="-fx-background-color: #171717;"
+        <VBox prefHeight="620.0" prefWidth="240.0" spacing="8.0"
+              style="-fx-background-color: #171717; -fx-border-width: 0 1px 0 0;" styleClass="border"
               stylesheets="@stylesheets/buttons.css" BorderPane.alignment="CENTER">
             <children>
                 <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Digital Journal">
@@ -47,10 +54,14 @@
                     </VBox.margin>
                 </Text>
                 <Button alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
-                        styleClass="sidebar-button" text="Dashboard" textFill="WHITE">
+                        stylesheets="@stylesheets/buttons.css" text="Dashboard" textFill="WHITE">
                     <font>
                         <Font size="14.0"/>
                     </font>
+                    <styleClass>
+                        <String fx:value="sidebar-button"/>
+                        <String fx:value="selected-button"/>
+                    </styleClass>
                 </Button>
                 <Button alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
                         styleClass="sidebar-button" text="Journal" textFill="WHITE">

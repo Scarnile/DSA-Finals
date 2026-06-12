@@ -14,13 +14,12 @@ public class MainApplication extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
 
-        stage.setResizable(true);
         stage.setTitle("Journal");
         stage.setScene(scene);
 
         // Set the minimum bounds for the window
-        stage.setMinWidth(700);
-        stage.setMinHeight(400);
+        stage.setMinWidth(800);
+        stage.setMinHeight(500);
 
         // CSS
         String css = Objects.requireNonNull(getClass().getResource("stylesheets/application.css")).toExternalForm();

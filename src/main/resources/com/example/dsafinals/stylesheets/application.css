@@ -2,3 +2,12 @@
     -fx-font-family: "sans-serif";
 }
 
+.button {
+    -fx-padding: 10px 17px;
+    -fx-background-radius: 13px;
+}
+
+.border {
+    -fx-border-color: #262626;
+    -fx-border-style: solid;
+}
