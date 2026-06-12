@@ -12,9 +12,15 @@ public class MainApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1220, 640);
+
         stage.setResizable(true);
         stage.setTitle("Hello!");
         stage.setScene(scene);
+
+        // Set the minimum bounds for the window
+        stage.setMinWidth(500);
+        stage.setMinHeight(300);
+
         stage.show();
     }
 }
