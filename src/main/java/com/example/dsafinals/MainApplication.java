@@ -19,7 +19,7 @@ public class MainApplication extends Application {
 
         // Set the minimum bounds for the window
         stage.setMinWidth(800);
-        stage.setMinHeight(500);
+        stage.setMinHeight(550);
 
         // CSS
         String css = Objects.requireNonNull(getClass().getResource("stylesheets/application.css")).toExternalForm();

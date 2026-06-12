@@ -1,6 +1,7 @@
 module com.example.dsafinals {
     requires javafx.controls;
     requires javafx.fxml;
+    requires org.kordamp.ikonli.javafx;
 
 
     opens com.example.dsafinals to javafx.fxml;
