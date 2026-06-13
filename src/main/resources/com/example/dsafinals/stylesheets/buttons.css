@@ -9,9 +9,8 @@
     -fx-background-color: #1447e6;
 }
 
-
 .sidebar-button {
-    -fx-padding: 10;
+    -fx-padding: 12px 10px;
     -fx-font-size: 17px;
     -fx-background-color: transparent;
     -fx-font-weight: 600;

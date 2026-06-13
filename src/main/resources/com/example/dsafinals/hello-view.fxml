@@ -20,7 +20,7 @@
                         <HBox maxWidth="1.7976931348623157E308" prefHeight="55.0" prefWidth="100.0" style="-fx-border-width: 0 0 1px 0;" styleClass="border" BorderPane.alignment="CENTER">
                             <children>
                                 <Region prefHeight="20.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
-                                <Button minWidth="-Infinity" mnemonicParsing="false" styleClass="primary-button" stylesheets="@stylesheets/buttons.css" text="+  New Entry">
+                                <Button fx:id="newEntryButton" minWidth="-Infinity" mnemonicParsing="false" styleClass="primary-button" stylesheets="@stylesheets/buttons.css" text="New Entry">
                                     <font>
                                         <Font size="16.0" />
                                     </font>
@@ -39,13 +39,13 @@
                     </top>
                 </BorderPane>
             </top>
-         <center>
-            <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
-         </center>
+            <center>
+                <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+            </center>
         </BorderPane>
     </center>
     <left>
-        <VBox fx:id="sidebar" prefHeight="620.0" prefWidth="240.0" spacing="8.0" style="-fx-background-color: #171717; -fx-border-width: 0 1px 0 0;" styleClass="border" stylesheets="@stylesheets/buttons.css" BorderPane.alignment="CENTER">
+        <VBox fx:id="sidebar" maxWidth="260.0" minWidth="220.0" prefHeight="620.0" prefWidth="250.0" spacing="8.0" style="-fx-background-color: #171717; -fx-border-width: 0 1px 0 0;" styleClass="border" stylesheets="@stylesheets/buttons.css" BorderPane.alignment="CENTER">
             <children>
                 <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Digital Journal">
                     <font>
@@ -64,23 +64,23 @@
                         <String fx:value="sidebar-button" />
                     </styleClass>
                 </Button>
-                <Button alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="sidebar-button" text="Journal" textFill="WHITE">
+                <Button fx:id="journalButton" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="sidebar-button" text="Journal" textFill="WHITE">
                     <font>
                         <Font size="14.0" />
                     </font>
                 </Button>
-                <Button alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="sidebar-button" text="Albums" textFill="WHITE">
+                <Button fx:id="albumsButton" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="sidebar-button" text="Albums" textFill="WHITE">
                     <font>
                         <Font size="14.0" />
                     </font>
                 </Button>
-                <Button alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="sidebar-button" text="Photos" textFill="WHITE">
+                <Button fx:id="photosButton" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="sidebar-button" text="Photos" textFill="WHITE">
                     <font>
                         <Font size="14.0" />
                     </font>
                 </Button>
                 <Region prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
-                <Button alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="sidebar-button" text="Settings" textFill="WHITE">
+                <Button fx:id="settingsButton" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="sidebar-button" text="Settings" textFill="WHITE">
                     <font>
                         <Font size="14.0" />
                     </font>

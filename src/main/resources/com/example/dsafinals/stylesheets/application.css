@@ -11,3 +11,7 @@
     -fx-border-color: #262626;
     -fx-border-style: solid;
 }
+
+.sidebar-icon {
+    -fx-icon-color: white;
+}
