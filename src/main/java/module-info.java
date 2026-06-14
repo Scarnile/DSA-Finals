@@ -6,4 +6,6 @@ module com.example.dsafinals {
 
     opens com.example.dsafinals to javafx.fxml;
     exports com.example.dsafinals;
+    exports com.example.dsafinals.controllers;
+    opens com.example.dsafinals.controllers to javafx.fxml;
 }
