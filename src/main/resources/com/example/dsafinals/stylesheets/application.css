@@ -62,12 +62,6 @@
     -fx-background-color: #808080;
 }
 
-/* Change thumb color when clicked/pressed */
-.scroll-pane .scroll-bar:horizontal .thumb:pressed,
-.scroll-pane .scroll-bar:vertical .thumb:pressed {
-    -fx-background-color: #3a78c4;
-}
-
 /* Hide or modify the increment/decrement arrow buttons */
 .scroll-pane .scroll-bar .increment-button,
 .scroll-pane .scroll-bar .decrement-button {

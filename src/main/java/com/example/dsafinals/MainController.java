@@ -30,34 +30,37 @@ public class MainController {
 
     @FXML
     public void initialize() {
+
+        int iconSize = 20;
+
         // Dashboard
         FontIcon homeIcon = new FontIcon("mdi2h-home");
         homeIcon.getStyleClass().add("sidebar-icon");
-        homeIcon.setIconSize(20);
+        homeIcon.setIconSize(iconSize);
         dashboardButton.setGraphic(homeIcon);
 
         // Journal
         FontIcon journalIcon = new FontIcon("mdi2b-book-open-page-variant");
         journalIcon.getStyleClass().add("sidebar-icon");
-        journalIcon.setIconSize(20);
+        journalIcon.setIconSize(iconSize);
         journalButton.setGraphic(journalIcon);
 
         // Albums
         FontIcon albumIcon = new FontIcon("mdi2f-folder");
         albumIcon.getStyleClass().add("sidebar-icon");
-        albumIcon.setIconSize(20);
+        albumIcon.setIconSize(iconSize);
         albumsButton.setGraphic(albumIcon);
 
         // Photos
         FontIcon photoIcon = new FontIcon("mdi2i-image");
         photoIcon.getStyleClass().add("sidebar-icon");
-        photoIcon.setIconSize(20);
+        photoIcon.setIconSize(iconSize);
         photosButton.setGraphic(photoIcon);
 
         // Settings
         FontIcon settingsIcon = new FontIcon("mdi2c-cog");
         settingsIcon.getStyleClass().add("sidebar-icon");
-        settingsIcon.setIconSize(20);
+        settingsIcon.setIconSize(iconSize);
         settingsButton.setGraphic(settingsIcon);
 
         // New Entry
