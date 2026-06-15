@@ -38,6 +38,7 @@ public class MainController {
 
     @FXML
     public void initialize() {
+        // Set icons for each button
         dashboardButton.setGraphic(createIcon("mdi2h-home"));
         journalButton.setGraphic(createIcon("mdi2b-book-open-page-variant"));
         albumsButton.setGraphic(createIcon("mdi2f-folder"));
@@ -45,6 +46,11 @@ public class MainController {
         settingsButton.setGraphic(createIcon("mdi2c-cog"));
         newEntryButton.setGraphic(createIcon("mdi2p-plus"));
 
+        // Change the view when a button is pressed
+        dashboardButton.setOnAction(e -> loadPage("dashboard.fxml"));
+        journalButton.setOnAction(e -> loadPage("journal.fxml"));
+        albumsButton.setOnAction(e -> loadPage("albums.fxml"));
+        photosButton.setOnAction(e -> loadPage("photos.fxml"));
 
         // Resize the sidebar based on the window width
         sidebar.sceneProperty().addListener((obs, oldScene, newScene) -> {
@@ -52,19 +58,11 @@ public class MainController {
                 sidebar.prefWidthProperty().bind(newScene.widthProperty().multiply(0.17));
             }
         });
-
-
-//        URL url = getClass().getResource("/com/example/dsafinals/fxml/dashboard.fxml");
-//        System.out.println(url);
-//        loadPage("/fxml/dashboard.fxml");
-        dashboardButton.setOnAction(e -> {
-            loadPage("/fxml/dashboard.fxml");
-        });
     }
 
     private void loadPage(String fxml) {
         try {
-            URL url = getClass().getResource("/com/example/dsafinals/fxml/dashboard.fxml");
+            URL url = getClass().getResource("/com/example/dsafinals/fxml/" + fxml);
             System.out.println(url);
 
             Parent page = FXMLLoader.load(url);
