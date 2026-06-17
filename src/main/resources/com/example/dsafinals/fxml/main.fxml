@@ -17,8 +17,14 @@
             <top>
                 <BorderPane minHeight="-Infinity" prefWidth="760.0" BorderPane.alignment="CENTER">
                     <top>
-                        <HBox maxWidth="1.7976931348623157E308" prefHeight="55.0" prefWidth="100.0" style="-fx-border-width: 0 0 1px 0;" styleClass="border" BorderPane.alignment="CENTER">
+                        <HBox alignment="BASELINE_CENTER" maxWidth="1.7976931348623157E308" prefHeight="55.0" prefWidth="750.0" style="-fx-border-width: 0 0 1px 0;" styleClass="border" BorderPane.alignment="CENTER">
                             <children>
+                        <Button fx:id="undoButton" mnemonicParsing="false" style="-fx-icon-color: white;" styleClass="sidebar-button" stylesheets="@../stylesheets/buttons.css" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="redoButton" mnemonicParsing="false" styleClass="transparent-button" stylesheets="@../stylesheets/buttons.css" textFill="WHITE" />
                                 <Region prefHeight="20.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
                                 <Button fx:id="newEntryButton" minWidth="-Infinity" mnemonicParsing="false" styleClass="primary-button" stylesheets="@../stylesheets/buttons.css" text="New Entry">
                                     <font>

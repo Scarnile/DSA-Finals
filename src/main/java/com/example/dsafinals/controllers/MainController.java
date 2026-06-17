@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import org.kordamp.ikonli.javafx.FontIcon;
 
 import java.io.IOException;
@@ -34,6 +35,12 @@ public class MainController {
     private Button newEntryButton;
 
     @FXML
+    private Button undoButton;
+
+    @FXML
+    private Button redoButton;
+
+    @FXML
     private StackPane contentArea;
 
     @FXML
@@ -45,6 +52,8 @@ public class MainController {
         photosButton.setGraphic(createIcon("mdi2i-image"));
         settingsButton.setGraphic(createIcon("mdi2c-cog"));
         newEntryButton.setGraphic(createIcon("mdi2p-plus"));
+        undoButton.setGraphic(new FontIcon("mdi2u-undo"));
+        redoButton.setGraphic(new FontIcon("mdi2r-redo"));
 
         // Change the view when a button is pressed
         dashboardButton.setOnAction(e -> loadPage("dashboard.fxml"));
