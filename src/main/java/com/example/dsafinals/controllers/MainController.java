@@ -6,7 +6,6 @@ import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
 import org.kordamp.ikonli.javafx.FontIcon;
 
 import java.io.IOException;
@@ -52,8 +51,9 @@ public class MainController {
         photosButton.setGraphic(createIcon("mdi2i-image"));
         settingsButton.setGraphic(createIcon("mdi2c-cog"));
         newEntryButton.setGraphic(createIcon("mdi2p-plus"));
-        undoButton.setGraphic(new FontIcon("mdi2u-undo"));
-        redoButton.setGraphic(new FontIcon("mdi2r-redo"));
+
+        undoButton.setGraphic(createIcon("mdi2u-undo", "topbar-icon-disabled"));
+        redoButton.setGraphic(createIcon("mdi2r-redo", "topbar-icon-disabled"));
 
         // Change the view when a button is pressed
         dashboardButton.setOnAction(e -> loadPage("dashboard.fxml"));
@@ -86,6 +86,13 @@ public class MainController {
     public FontIcon createIcon(String iconCode) {
         FontIcon addIcon = new FontIcon(iconCode);
         addIcon.getStyleClass().add("sidebar-icon");
+        addIcon.setIconSize(18);
+        return addIcon;
+    }
+
+    public FontIcon createIcon(String iconCode, String styleClass) {
+        FontIcon addIcon = new FontIcon(iconCode);
+        addIcon.getStyleClass().add(styleClass);
         addIcon.setIconSize(18);
         return addIcon;
     }

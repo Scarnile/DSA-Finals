@@ -19,6 +19,18 @@
     -fx-icon-color: white;
 }
 
+.topbar-icon-disabled {
+    -fx-icon-color: #353535;
+    -fx-background-color: transparent;
+    
+}
+
+.topbar-icon-available {
+    -fx-icon-color: #9e9e9e;
+    -fx-background-color: transparent;
+
+}
+
 /*Colors*/
 .background {
     -fx-background-color: -bg-color;

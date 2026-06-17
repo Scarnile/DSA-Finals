@@ -19,7 +19,7 @@
                     <top>
                         <HBox alignment="BASELINE_CENTER" maxWidth="1.7976931348623157E308" prefHeight="55.0" prefWidth="750.0" style="-fx-border-width: 0 0 1px 0;" styleClass="border" BorderPane.alignment="CENTER">
                             <children>
-                        <Button fx:id="undoButton" mnemonicParsing="false" style="-fx-icon-color: white;" styleClass="sidebar-button" stylesheets="@../stylesheets/buttons.css" textFill="WHITE">
+                        <Button fx:id="undoButton" mnemonicParsing="false" style="-fx-icon-color: white;" styleClass="transparent-button" stylesheets="@../stylesheets/buttons.css" textFill="WHITE">
                            <HBox.margin>
                               <Insets left="20.0" />
                            </HBox.margin>

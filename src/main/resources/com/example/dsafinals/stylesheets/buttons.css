@@ -14,11 +14,11 @@
     -fx-font-size: 17px;
     -fx-background-color: transparent;
     -fx-font-weight: 600;
+    -fx-icon-color: white;
 }
 
 .sidebar-button:hover {
     -fx-background-color: #262626;
-
 }
 
 .selected-button {
