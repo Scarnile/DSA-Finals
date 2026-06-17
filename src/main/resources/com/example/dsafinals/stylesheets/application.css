@@ -31,6 +31,15 @@
 
 }
 
+.titleBar {
+    -fx-background-color: #070707;
+    -fx-text-fill: white;
+}
+
+.titleBar .text {
+    -fx-text-fill: white;
+}
+
 /*Colors*/
 .background {
     -fx-background-color: -bg-color;
