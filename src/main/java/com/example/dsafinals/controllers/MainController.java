@@ -42,8 +42,12 @@ public class MainController {
     @FXML
     private StackPane contentArea;
 
+    private Button selectedButton;
+
     @FXML
     public void initialize() {
+        selectedButton = dashboardButton;
+
         // Set icons for each button
         dashboardButton.setGraphic(createIcon("mdi2h-home"));
         journalButton.setGraphic(createIcon("mdi2b-book-open-page-variant"));
@@ -56,10 +60,22 @@ public class MainController {
         redoButton.setGraphic(createIcon("mdi2r-redo", "topbar-icon-disabled"));
 
         // Change the view when a button is pressed
-        dashboardButton.setOnAction(e -> loadPage("dashboard.fxml"));
-        journalButton.setOnAction(e -> loadPage("journal.fxml"));
-        albumsButton.setOnAction(e -> loadPage("albums.fxml"));
-        photosButton.setOnAction(e -> loadPage("photos.fxml"));
+        dashboardButton.setOnAction(e -> {
+            loadPage("dashboard.fxml");
+            selectButton(dashboardButton);
+        });
+        journalButton.setOnAction(e -> {
+            loadPage("journal.fxml");
+            selectButton(journalButton);
+        });
+        albumsButton.setOnAction(e -> {
+            loadPage("albums.fxml");
+            selectButton(albumsButton);
+        });
+        photosButton.setOnAction(e -> {
+            loadPage("photos.fxml");
+            selectButton(photosButton);
+        });
 
         // Resize the sidebar based on the window width
         sidebar.sceneProperty().addListener((obs, oldScene, newScene) -> {
@@ -95,5 +111,14 @@ public class MainController {
         addIcon.getStyleClass().add(styleClass);
         addIcon.setIconSize(18);
         return addIcon;
+    }
+
+    public void selectButton(Button button) {
+        if (selectedButton != null) {
+            selectedButton.getStyleClass().remove("selected-button");
+        }
+
+        button.getStyleClass().add("selected-button");
+        selectedButton = button;
     }
 }
