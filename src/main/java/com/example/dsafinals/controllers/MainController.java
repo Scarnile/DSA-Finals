@@ -60,22 +60,10 @@ public class MainController {
         redoButton.setGraphic(createIcon("mdi2r-redo", "topbar-icon-disabled"));
 
         // Change the view when a button is pressed
-        dashboardButton.setOnAction(e -> {
-            loadPage("dashboard.fxml");
-            selectButton(dashboardButton);
-        });
-        journalButton.setOnAction(e -> {
-            loadPage("journal.fxml");
-            selectButton(journalButton);
-        });
-        albumsButton.setOnAction(e -> {
-            loadPage("albums.fxml");
-            selectButton(albumsButton);
-        });
-        photosButton.setOnAction(e -> {
-            loadPage("photos.fxml");
-            selectButton(photosButton);
-        });
+        bindSidebarButton(dashboardButton, "dashboard.fxml");
+        bindSidebarButton(journalButton, "journal.fxml");
+        bindSidebarButton(albumsButton, "albums.fxml");
+        bindSidebarButton(photosButton, "photos.fxml");
 
         // Resize the sidebar based on the window width
         sidebar.sceneProperty().addListener((obs, oldScene, newScene) -> {
@@ -120,5 +108,12 @@ public class MainController {
 
         button.getStyleClass().add("selected-button");
         selectedButton = button;
+    }
+
+    public void bindSidebarButton(Button button, String fxml) {
+        button.setOnAction(e -> {
+            loadPage(fxml);
+            selectButton(button);
+        });
     }
 }
