@@ -46,7 +46,7 @@
                 </BorderPane>
             </top>
          <center>
-            <StackPane fx:id="contentArea" alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" prefHeight="150.0" BorderPane.alignment="CENTER" />
+            <StackPane fx:id="contentArea" alignment="TOP_RIGHT" maxWidth="1.7976931348623157E308" prefHeight="150.0" BorderPane.alignment="CENTER" />
          </center>
         </BorderPane>
     </center>
