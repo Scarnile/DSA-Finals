@@ -2,7 +2,39 @@
     -bg-color: #0a0a0a;
     -primary-color: #155dfc;
     -sidebar-color: #171717;
+
+    -primary-text: #fff;
     -fx-font-family: "sans-serif";
+    -page-padding: 20;
+}
+
+.title-text {
+    -fx-font-size: 36;
+    -fx-font-weight: bold;
+    -fx-fill: -primary-text;
+}
+
+.text {
+    -fx-fill: -primary-text;
+}
+
+.muted-text {
+    -fx-fill: #93a1a1;
+}
+
+.card {
+    -fx-background-color: #262626;
+    -fx-background-radius: 12px;
+}
+
+.colored-icon-box {
+    -fx-background-color: #2ecc71; /* Green color */
+    -fx-background-radius: 10px; /* Smooth rounded box */
+    -fx-min-width: 50px;
+    -fx-min-height: 50px;
+    -fx-max-width: 50px;
+    -fx-max-height: 50px;
+    -fx-alignment: center;
 }
 
 .button {
@@ -22,7 +54,7 @@
 .topbar-icon-disabled {
     -fx-icon-color: #353535;
     -fx-background-color: transparent;
-    
+
 }
 
 .topbar-icon-available {

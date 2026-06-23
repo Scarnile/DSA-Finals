@@ -76,7 +76,7 @@ public class MainController {
     private void loadPage(String fxml) {
         try {
             URL url = getClass().getResource("/com/example/dsafinals/fxml/" + fxml);
-            System.out.println(url);
+//            System.out.println(url);
 
             Parent page = FXMLLoader.load(url);
 
