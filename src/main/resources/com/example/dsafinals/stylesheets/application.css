@@ -8,6 +8,17 @@
     -page-padding: 20;
 }
 
+.dialog-title {
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+    -fx-text-fill: -primary-text;
+}
+
+.dialog-label {
+    -fx-font-size: 14;
+    -fx-text-fill: -primary-text;
+}
+
 .title-text {
     -fx-font-size: 36;
     -fx-font-weight: bold;

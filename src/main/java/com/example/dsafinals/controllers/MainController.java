@@ -3,9 +3,12 @@ package com.example.dsafinals.controllers;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 import org.kordamp.ikonli.javafx.FontIcon;
 
 import java.io.IOException;
@@ -64,6 +67,7 @@ public class MainController {
         bindSidebarButton(journalButton, "journal.fxml");
         bindSidebarButton(albumsButton, "albums.fxml");
         bindSidebarButton(photosButton, "photos.fxml");
+        settingsButton.setOnAction(e -> openSettingsDialog());
 
         // Resize the sidebar based on the window width
         sidebar.sceneProperty().addListener((obs, oldScene, newScene) -> {
@@ -115,5 +119,26 @@ public class MainController {
             loadPage(fxml);
             selectButton(button);
         });
+    }
+
+    private void openSettingsDialog() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/dsafinals/fxml/settings-dialog.fxml"));
+            Parent root = loader.load();
+
+            Stage stage = new Stage();
+            stage.setTitle("Settings");
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.initOwner(settingsButton.getScene().getWindow());
+            stage.setResizable(false);
+
+            Scene scene = new Scene(root, 400, 250);
+//            scene.getStylesheets().addAll(getClass().getResource("/com/example/dsafinals/stylesheets/application.css").toExternalForm(), getClass().getResource("/com/example/dsafinals/stylesheets/buttons.css").toExternalForm());
+
+            stage.setScene(scene);
+            stage.showAndWait();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
