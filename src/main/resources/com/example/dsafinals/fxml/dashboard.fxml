@@ -23,22 +23,22 @@
             </Text>
             <HBox maxWidth="1.7976931348623157E308" prefHeight="100.0" spacing="10.0">
                 <children>
-                    <HBox maxWidth="1.7976931348623157E308" prefHeight="100.0" styleClass="card">
+                    <HBox maxWidth="1.7976931348623157E308" prefHeight="100.0" styleClass="card" HBox.hgrow="ALWAYS">
                         <children>
-                            <StackPane maxWidth="1.7976931348623157E308" prefWidth="200.0"/>
-                            <VBox prefWidth="100.0"/>
+                            <StackPane maxWidth="1.7976931348623157E308" prefWidth="200.0" HBox.hgrow="ALWAYS"/>
+                            <VBox maxWidth="1.7976931348623157E308" prefWidth="100.0" HBox.hgrow="ALWAYS"/>
                         </children>
                     </HBox>
-                    <HBox maxWidth="1.7976931348623157E308" prefHeight="100.0" styleClass="card">
+                    <HBox maxWidth="1.7976931348623157E308" prefHeight="100.0" styleClass="card" HBox.hgrow="ALWAYS">
                         <children>
-                            <StackPane prefWidth="200.0"/>
-                            <VBox prefWidth="100.0"/>
+                            <StackPane maxWidth="1.7976931348623157E308" prefWidth="200.0" HBox.hgrow="ALWAYS"/>
+                            <VBox maxWidth="1.7976931348623157E308" prefWidth="100.0" HBox.hgrow="ALWAYS"/>
                         </children>
                     </HBox>
-                    <HBox maxWidth="1.7976931348623157E308" prefHeight="100.0" styleClass="card">
+                    <HBox maxWidth="1.7976931348623157E308" prefHeight="100.0" styleClass="card" HBox.hgrow="ALWAYS">
                         <children>
-                            <StackPane prefWidth="200.0"/>
-                            <VBox prefWidth="100.0"/>
+                            <StackPane maxWidth="1.7976931348623157E308" prefWidth="200.0" HBox.hgrow="ALWAYS"/>
+                            <VBox maxWidth="1.7976931348623157E308" prefWidth="100.0" HBox.hgrow="ALWAYS"/>
                         </children>
                     </HBox>
                 </children>
